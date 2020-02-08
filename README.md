@@ -1,6 +1,6 @@
 # STSCI 4780 Lecture Resources
 
-In the reference lists below, references with "&sext;" are particularly recommended. *Kruschke* refers to John Kruschke's  [*Doing Bayesian Data Analysis* (2nd edition)](https://sites.google.com/site/doingbayesiandataanalysis/), the recommended text for STSCI 4780. *Rethinking* refers to McElreath's *Statistical Rethinking*. *BDA3* refers to the third edition of [*Bayesian Data Analysis*](http://www.stat.columbia.edu/~gelman/book/) by Gelman et al. (2013), the standard statistics PhD-level reference on Bayesian data analysis.
+In the reference lists below, references with "&sext;" are particularly recommended. *Kruschke* refers to John Kruschke's  [*Doing Bayesian Data Analysis* (2nd edition)](https://sites.google.com/site/doingbayesiandataanalysis/), the recommended text for STSCI 4780. *Rethinking* refers to McElreath's *Statistical Rethinking*. *BDA3* refers to the third edition of [*Bayesian Data Analysis*](http://www.stat.columbia.edu/~gelman/book/) by Gelman et al. (2013), the standard statistics PhD-level reference on Bayesian data analysis.
 
 ## Lec01 - The big picture
 
@@ -47,7 +47,7 @@ Slides:  [Lec02-Logic+Probability.pdf](Lec02-Logic+Probability.pdf)
 
 * The most clear and forceful mid-20th century advocates of the probability-as-logic viewpoint were two physicists, Richard Cox ([Richard Threlkeld Cox - Wikipedia](https://en.wikipedia.org/wiki/Richard_Threlkeld_Cox)) and Ed Jaynes ([Edwin Thompson Jaynes - Wikipedia](https://en.wikipedia.org/wiki/Edwin_Thompson_Jaynes)).  They built on the legacies of Laplace and Jeffreys.  An accessible early exposition is the article, ["How Does the Brain Do Plausible Reasoning?"](http://bayes.wustl.edu/etj/articles/brain.pdf), by Ed Jaynes (1957; the link is to a 1988 reprint of the original report). For a brief (4pp) overview of the line of argument, see section 3 of my first Bayesian publication: ["From Laplace to Supernova SN 1987A: Bayesian Inference in Astrophysics"](http://www.astro.cornell.edu/staff/loredo/bayes/L90-LaplaceToSN1987A-scan.pdf) (1990; note the errata at the end, and be patient with the sometimes-polemical tone, reflecting the controversial status of Bayesian methods ca. 1990; this paper became half of my PhD thesis).
 
-* The most thorough recent treatment is in the first two chapters of Jaynes's posthumously published book, [*Probability theory: The logic science* (PTLOS) ](http://www.cambridge.org/us/academic/subjects/physics/theoretical-physics-and-mathematical-physics/probability-theory-logic-science?format=HB&isbn=9780521592710#trCy9CBbIU08dEfg.97) (on course reserve).  [&sext; These two chapters are available online](http://bayes.wustl.edu/etj/prob/book.pdf) via Washington University, where Jaynes worked and where his last PhD student, G. Larry Bretthorst, maintains an archive of Jaynes's work: [Probability Theory As Extended Logic](http://bayes.wustl.edu/).  More chapters from a pre-publication version of the book are [available via archive.org](https://web.archive.org/web/20180122210541/http://omega.albany.edu:8008/JaynesBook.html). This book is truly outstanding, though it was written mostly before the advent of powerful computational methods for Bayesian inference, and thus is not the most practical book on modern Bayesian data analysis.
+* The most thorough recent treatment is in the first two chapters of Jaynes's posthumously published book, [*Probability theory: The logic science* (PTLOS) ](http://www.cambridge.org/us/academic/subjects/physics/theoretical-physics-and-mathematical-physics/probability-theory-logic-science?format=HB&isbn=9780521592710#trCy9CBbIU08dEfg.97) (on course reserve).  [&sext; These two chapters are available online](http://bayes.wustl.edu/etj/prob/book.pdf) via Washington University, where Jaynes worked and where his last PhD student, G. Larry Bretthorst, maintains an archive of Jaynes's work: [Probability Theory As Extended Logic](http://bayes.wustl.edu/).  More chapters from a pre-publication version of the book are [available via archive.org](https://web.archive.org/web/20180122210541/http://omega.albany.edu:8008/JaynesBook.html). This book is truly outstanding, though it was written mostly before the advent of powerful computational methods for Bayesian inference, and thus is not the most practical book on modern Bayesian data analysis.
 
 * For a fun read about Jaynes's book, see the entertaining review by Stanford (formerly Cornell) statistician/mathematician Persi Diaconis: [&sext; "A Frequentist Does This, A Bayesian That"](https://www.siam.org/news/news.php?id=81):  
 
@@ -60,4 +60,98 @@ Slides:  [Lec02-Logic+Probability.pdf](Lec02-Logic+Probability.pdf)
 * Two particularly clear recent books explaining the subjective Bayes outlook are Dennis Lindley's [&sext; *Understanding Uncertainty*](http://onlinelibrary.wiley.com/book/10.1002/0470055480) (a free download via CULib) and Jay Kadane's [*Principles of Uncertainty*](https://www.crcpress.com/Principles-of-Uncertainty/Kadane/p/book/9781439861615) (2011; on course reserve and also available as a free PDF via [Kadane's book site archived at archive.org](https://web.archive.org/web/20170914095926/http://uncertainty.stat.cmu.edu/)).  Lindley's book is largely nontechnical; Kadane's is mathematical, but with an emphasis on concepts, especially in the early chapters (I'd give it a &sext;, but it's more technical than other starred resources).  See also *CHANCE* magazine's interview: ["Discussing *Principles of Uncertainty* with Jay Kadane"](http://chance.amstat.org/2013/04/kadane-interview/). Lindley published an article-length overview: [&sext; "The Philosophy of Statistics"](https://www.jstor.org/stable/2681060?seq=1#page_scan_tab_contents) (2000; this was published in *The Statistician*, a Royal Statistical Society journal intended for a wide, not-too-technical audience; this journal became the magazine *Significance* in 2004, a joint publication of the RSS and the American Statistical Society).
 
 * The **objective Bayes** viewpoint rests on the subjective Bayes foundational arguments (optimal betting), but seeks to use rule-based priors as much as possible. It has a lot of overlap with the probability-as-logic viewpoint. Many practitioners who favor logical Bayes foundations nevertheless would happily accept "objective Bayes" as a fair description of their approach. 
+
+## Lec03 - Key theorems
+
+Slides:  [Lec03-KeyTheorems.pdf](Lec03-KeyTheorems.pdf)
+
+* Bayes's theorem (BT)
+* The law of total probability (LTP)
+  - Extending the question/"wishful thinking"
+  - Marginalization
+* Normalization for exclusive, exhaustive alternatives
+
+BT was illustrated with a binary hypothesis/binary data problem: Cancer diagnosis.
+
+### Suggested reading/viewing
+
+*Kruschke* Chapter 5 treats Bayes's theorem (also known as "Bayes' rule").
+
+For fans of video lectures, Harvard statistician Joe Blitzstein covers Bayes's theorem ("conditioning") and the law of total probability in [Lecture 5: Conditioning Continued, Law of Total Probability | Statistics 110 - YouTube](https://www.youtube.com/watch?v=JzDvVgNDxo8). He discusses the Monty Hall problem in a subsequent lecture. These are chalk-on-blackboard lectures. Blitzstein is the person from whom I got the "wishful thinking" characterization of LTP that I shared in Lec04.
+
+**Case diagrams:** The "case diagrams" or "case lattices" in the binary classification/cancer diagnosis example of Lec03, are more popularly known as "natural frequency trees," a pedagogical tool that's been widely popularized by German social scientist [Gerg Gigerenzer](https://en.wikipedia.org/wiki/Gerd_Gigerenzer). (I don't use that term because the frequencies are not "natural"—they're *ideal*—and the diagram is technically not a tree.) His popular-level book, [*Calculated Risks*](http://www.simonandschuster.com/books/Calculated-Risks/Gerd-Gigerenzer/9780743254236), uses such diagrams to teach basic Bayesian reasoning. Gigerenzer has done research on teaching people how to understand risk and uncertainty; the research demonstrates the value of such tools. 
+
+* Cornell mathematician [Steven Strogatz](http://www.stevenstrogatz.com/), a widely-lauded popularizer of mathematics and regular NPR guest and commentator, used to write a popular math column for the *New York Times*. He covered Gigerenzer's *Calculated Risks* book in a 2010 column: [&sext; "Chances Are"  (*The New York Times*)](https://opinionator.blogs.nytimes.com/2010/04/25/chances-are/). This is a fast and fun summary of Gigerenzer's main ideas.
+* For a recent presentation of some of this research, see ["Natural frequencies improve Bayesian reasoning in simple and complex inference tasks"](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4604268/) (Hoffrage et al., 2015).
+* See [Gerd Gigerenzer's *Calculated Risks* site | Max Planck Institute for Human Development](https://www.mpib-berlin.mpg.de/en/research/adaptive-behavior-and-cognition/publications/books/calculated-risks) for links to more of his research.
+* See [Frequency format hypothesis - Wikipedia](https://en.wikipedia.org/wiki/Frequency_format_hypothesis) for an overview of the research (with pros and cons).
+
+
+
+## Lec04 - Inference in discrete spaces
+
+Slides:  [Lec04-DiscreteSpaces.pdf](Lec04-DiscreteSpaces.pdf)
+
+
+
+### Suggested reading
+
+The last example in Lec04—the possibly biased coin problem—is a discretization of a problem that is inherently continuous (i.e., the probability for heads could be any number in $[0,1]$, which we treat in Lec05 in all its labyrinthian glory). The book, [&sext; *Think Bayes: Bayesian Statistics Made Simple*](http://greenteapress.com/wp/think-bayes/), by Allen Downey (2012), uses similar discretizations of many problems to teach Bayesian ideas in an accessible manner (including providing Python code to do the required calculations over discrete spaces). I found the book too, well, *discrete* to be a good teaching resource at the level of STSCI 4780. But Downey does a very good job covering key Bayesian concepts in the context of simple problems. The book is a free download and a quick read. It won't directly help you set up calculations for problems of realistic complexity, but it may help you better understand the fundamental ideas, which may well *indirectly* help you solve real problems. My favorite take-away from Downey's book is something simple: his introduction of the term *suite* as a convenient shorthand for "a collection of mutually exclusive, exhaustive alternatives."
+
+## Lec05 - Continuous parameter estimation with discrete data, 1
+
+Slides:  [Lec05-ParamEstmn-BetaBinomial.pdf](Lec05-ParamEstmn-BetaBinomial.pdf)
+
+* The continuum: PDFs vs. PMFs
+* Binary outcome data: Bernoulli, binomial, negative binomial distributions
+* Beta distribution posterior PDFs
+* Conjugate families (beta-Bernoulli, beta-binomial...)
+* The likelihood principle
+
+### Suggested reading
+
+*Kruschke* Chapter 6 works through the beta-bernoulli model.
+
+## Lec06 - Continuous parameter estimation with discrete data, 2
+
+Slides:  [Lec06-ParamEstmn-DirichletMultinomial.pdf](Lec06-ParamEstmn-DirichletMultinomial.pdf)
+
+* Probability and frequency:
+  - Bernoulli's weak law of large numbers: predict frequency from a given probability
+  - Bayes's theorem: Inferring per-trial probability from frequency data
+* Categorical data: categorical and multinomial distributions
+* Dirichlet distribution posterior PDFs
+* Dirichlet-categorical and Dirichlet-multinomial conjugacy
+* The Dirac delta function
+
+
+### Suggested reading
+
+**The Dirichlet-multinomial conjugate model:** See my [notes on this model](DirichletMultinomialNotes.pdf). This document reproduces the calculations of the lecture, but with more details. It also describes some additional calculations. I've adapted this from old notes for a colleague; as a result, some of the notation doesn't *exactly*  match the notation of Lec06 (e.g., I use $i$ rather than $k$ as the category index), but it's close. The section on model comparison won't make sense until a later lecture.
+
+**The Dirac delta function:** The $\delta$ function is named for physicist Paul Dirac, who devised it to make some formulas in quantum mechanics easier to interpret and manipulate. He was interested in generalizing some quantum mechanics methods that were developed in discrete spaces, extending them to work in the continuum. Specifically, he aimed to generalize the *Kronecker $\delta$* symbol, $\delta_{ij}$, a common tool used in discrete sums. It's basically the identity matrix in component form:
+$$
+\delta_{ij} = 
+  \begin{cases}
+    1 & \mbox{if } i=j, \\
+    0 & \mbox{if } i\ne j.
+  \end{cases}
+$$
+In a sum with a Kronecker $\delta$ multiplying vector or matrix components, summing over a $\delta$ index eliminates the sum and causes all occurrences of that index to be replaced with the other index. For example, for a vector $\vec{a}$ with components $a_j$,
+$$
+\sum_{j} a_{j} \delta_{ij} = a_i.
+$$
+Essentially, summing over $j$ sets $j=i$ everywhere in the summand. The Dirac $\delta$ function works analogously: integrating $f(x)\delta(x-c)$ over $x$ replaces $x$ with $c$, returning just $f(c)$—it just sets $x=c$ everywhere in the integrand. Incidentally, the $\delta$ function is symmetric; $\delta(c-x)$ has the same effect as $\delta(x-c)$. I sometimes exploit this, choosing the order of terms in the argument of a $\delta$ function to make it more readable.
+
+A few years after Dirac's introduction of $\delta(x)$, mathematician Laurent Schwartz put it on a firm mathematical footing, basically creating a new area of mathematics to do so: the theory of *distributions* (distinct from probability distributions) or *generalized functions* (there were hints of $\delta(x)$ and generalized functions in earlier work). The math literature in this area tends to be formal and technical, and not very accessible to non-mathematicians.
+
+Wikipedia has a helpful article on the $\delta$ function: [Dirac delta function - Wikipedia](https://en.wikipedia.org/wiki/Dirac_delta_function). Two recent overviews by physicists are worth a look:
+
+* [Appendix A: The Dirac Delta Function](http://onlinelibrary.wiley.com/doi/10.1002/9783527618460.app1/summary), in David Griffiths' *Introduction to Elementary Particles* (free PDF). This gives a few-page overview along the lines of the approach we took in Lec06, and includes material on transformations of $\delta$ functions that we will use later, when we cover *propagation of uncertainty* (an important application of $\delta$ functions).
+
+* Nicholas Wheeler's "Simplified Dirac Delta" notes at [Nicholas Wheeler's Documents](http://www.reed.edu/physics/faculty/wheeler/documents/) (look under "Miscellaneous Math: Delta Functions"). This is a lengthier treatment, relating the $\delta$ function to the simpler *Heaviside step function*. Even if you're not interested in Wheeler's step function approach, the early part of his notes is very much worth reading; it provides a very accessible account of the history of the $\delta$ function. He emphasizes a point we made in class, that the $\delta$ function only really makes sense in the context of integrals, describing Schwartz's generalized functions as new mathematical entities "that live always in the shade of an implied integral sign." He quotes Dirac on this point:
+
+  > There are a number of elementary equations which one can write down about $\delta$ functions. These equations are essentially *rules of manipulation* for algebraic work involving  $\delta$ functions. The meaning of any of these equations is that its two sides give equivalent results [when used] as *factors in an integrand*.
+
+  Wheeler's companion article, "Delta Interrelations," explicitly demonstrates a point I made but did not demonstrate in class—that you can use a wide variety of "parameterized peak" functions to define the $\delta$ function, all of them giving the same results in the limit of an infinitesimally narrow, infinitely tall peak. We used normalized boxes; Wheeler also uses Gaussian PDFs and other functions.
 
